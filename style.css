@@ -1,3 +1,36 @@
 body {
   background-color: lightgray;
 }
+
+@media screen and (max-width:600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+div.header {
+  background-color:lightblue;
+  width: calc(100% - 5px);
+}
+
+a {
+  color:blue;
+  transition: all 1s ease-out;
+}
+
+a:hover {
+  color:red;
+}
+
+ul.voordelen > :first-child {
+  color:#026717;
+}
+
+ul.nadelen > :first-child {
+  color:#920600;
+}
+
+img.img_small {
+  width: 30%;
+  height:30%;
+}
