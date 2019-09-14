@@ -2,17 +2,21 @@
   <head>
     <title>Ratties</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts.js"></script>
   </head>
 
   <body>
     <div class="header" align="center">
-      <h1>Raichu, Pichu, Eevee en Loki</h1>
-      <p>
+      <h1 id="title"></h1>
+      <p class="intro">
         Raichu en Pichu zijn geboren in maart 2018, Eevee en Loki zijn dit jaar
         in mei geboren. Ik heb ze alle 4 gekocht bij
-        <a href="https://www.facebook.com/RatteryCreepycritters/" target="_blank">
-        Rattery CreepyCritters </a>.
-
+        <a href="https://creepycritters.webs.com/" target="_blank">Rattery CreepyCritters</a>
+        <br>
+        <p id="rattery_info"></p>
+        <button onclick="rattery_info()">Klik hier voor meer info</button>
+        <button onclick="rattery_fb()">Rattery CreepyCritters Facebook</button>
+        <button onclick="title_color()">Verander kleur</button>
       </p>
     </div>
     <div align="center">
@@ -68,5 +72,13 @@
         </tr>
       </table>
     </div>
+    <p id="form_result"></p>
+    <form name="rat_aantal">
+      Hoeveel ratjes heb je? <input type="text" id="antwoord" name="antwoord">
+      <input type="button" onclick = "check_ratjes()" value="submit">
+    </form>
+    <script>
+      print_title();
+    </script>
   </body>
 </HTML>

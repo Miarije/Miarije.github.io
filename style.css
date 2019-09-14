@@ -10,7 +10,7 @@ body {
 
 div.header {
   background-color:lightblue;
-  width: calc(100% - 5px);
+  width: calc(100% - 10px);
 }
 
 a {
