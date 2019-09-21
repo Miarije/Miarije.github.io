@@ -1,0 +1,42 @@
+<HTML>
+  <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      var url = "https://dog.ceo/api/breeds/image/random"
+      $(document).ready(function() {
+        $("#get_data").click(function() {
+          $.getJSON(url,function(data) {
+            document.getElementById("image").src = data.message;
+            $("img").animate({opacity: '0.8'});
+          });
+        });//but1
+        $("#post_data").click(function() {
+          $.ajax({
+            url: "https://reqres.in/api/users",
+            type: "POST",
+            data: {
+                name: "Marije",
+                movies: ["LOTR", "Harry Potter"]
+            },
+            success: function(response){
+                console.log(response);
+                document.getElementById("result").innerHTML = "Success";
+            }
+          });
+        });//but2
+      });//doc ready
+
+    </script>
+
+  <button id="get_data">JSON data van public API</button>
+  <button id="post_data">Update</button>
+  <p id="result"></p>
+
+  <br>
+  <img id="image" src="">
+  </body>
+
+</HTML>
